@@ -1,0 +1,28 @@
+server:
+  port: 9000
+spring:
+  devtools:
+    livereload:
+      enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://3.37.155.50:5432/scm
+    username: admin
+    password: 1234
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 10MB
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+        show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
