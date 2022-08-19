@@ -1,6 +1,9 @@
 server:
-  port: 9000
+  port: 9990
+
 spring:
+  application:
+    name: login-service
   devtools:
     livereload:
       enabled: true
@@ -26,3 +29,10 @@ spring:
     hibernate:
       ddl-auto: update
     generate-ddl: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
