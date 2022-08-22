@@ -12,5 +12,6 @@ public class WebConfigure implements WebMvcConfigurer {
                 .allowedOrigins("http://192.168.0.47:3000")
                 .allowedMethods("*")
                 .allowedHeaders("*");
+
     }
 }
