@@ -23,8 +23,6 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @Autowired
-    SecurityService securityService;
     @GetMapping("/all")
     public List<UserEntity> getUserAll(){
         return userService.getUser();
@@ -33,17 +31,6 @@ public class UserController {
     @PostMapping("/login")
     public LoginDto login(@RequestBody RequestLoginDto requestLoginDto){
         return userService.getLogin(requestLoginDto);
-    }
-    @GetMapping("/token")
-    public String getToken(){
-        ServletRequestAttributes requestAttributes =
-                (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-        HttpServletRequest request = requestAttributes.getRequest();
-
-        String tokenBearer = request.getHeader("Authorization");
-
-        String subject = securityService.getSubject(tokenBearer);
-        return subject;
     }
 
     @GetMapping("/check")
