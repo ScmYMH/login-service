@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.xml.bind.DatatypeConverter;
 import java.security.Key;
 import java.util.Date;
-@Service
+@Component
 public class SecurityService {
 
     @Value("${jwt.secret_key}")

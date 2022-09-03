@@ -4,3 +4,8 @@ spring:
       uri: http://3.37.155.50:8888
       name: config
       profile: dev
+
+jwt:
+  header: Authorization
+  expTime: 864000000
+  secret_key: my-very-secret-keymy-very-secret-keymy-very-secret-keymy-very-secret-keymy-very-secret-key
