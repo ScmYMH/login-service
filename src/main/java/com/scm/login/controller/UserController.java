@@ -1,6 +1,5 @@
 package com.scm.login.controller;
 
-import com.scm.login.aspect.TokenRequired;
 import com.scm.login.config.SecurityService;
 import com.scm.login.dto.LoginDto;
 import com.scm.login.dto.RequestLoginDto;
@@ -36,7 +35,6 @@ public class UserController {
         return userService.getLogin(requestLoginDto);
     }
     @GetMapping("/token")
-    @TokenRequired
     public String getToken(){
         ServletRequestAttributes requestAttributes =
                 (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
@@ -47,7 +45,7 @@ public class UserController {
         String subject = securityService.getSubject(tokenBearer);
         return subject;
     }
-    @TokenRequired
+
     @GetMapping("/check")
     public Boolean check(){
         return true;
