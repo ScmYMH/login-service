@@ -2,6 +2,12 @@ server:
   port: 0
 
 spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: false
   application:
     name: login-service
   devtools:
