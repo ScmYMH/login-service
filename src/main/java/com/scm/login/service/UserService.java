@@ -39,10 +39,14 @@ public class UserService {
         map.put("id",loginUser.getUserId());
         map.put("userNm", loginUser.getUserNm());
         map.put("userId", loginUser.getUserId());
+        map.put("expNo", loginUser.getEmployeeNumber());
+        map.put("loginId", loginUser.getLoginId());
         log.info(String.valueOf(map));
         return LoginDto.builder()
                 .userNm(loginUser.getUserNm())
                 .userId(loginUser.getUserId())
+                .loginId(loginUser.getLoginId())
+                .employeeNumber(loginUser.getEmployeeNumber())
                 .token(token)
                 .build();
     }

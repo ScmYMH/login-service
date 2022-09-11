@@ -10,4 +10,5 @@ public class LoginDto {
     private String userNm;
     private String userId;
     private String loginId;
+    private String employeeNumber;
 }
