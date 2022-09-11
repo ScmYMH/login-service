@@ -20,7 +20,6 @@ public class UserService {
 
     @Autowired
     UserRepository userRepository;
-
     @Autowired
     SecurityService securityService;
 
